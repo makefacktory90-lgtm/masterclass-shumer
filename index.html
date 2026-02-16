@@ -149,7 +149,9 @@
 
         #progress { position: fixed; top: 0; left: 0; height: 2px; background: var(--accent); z-index: 10000; transition: width 0.1s; }
 
-        .protocol-bar { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.2em; color: var(--text-dim); padding: 12px 24px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+        .protocol-bar { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.2em; color: var(--text-dim); padding: 12px 24px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; background: var(--bg); }
+        .protocol-bar .home-link { color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
+        .protocol-bar .home-link:hover { color: var(--accent); }
         .protocol-bar .live-dot { display: inline-block; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; animation: pulse 2s infinite; margin-right: 8px; }
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
@@ -229,6 +231,7 @@
 <div id="progress" style="width: 0%"></div>
 
 <div class="protocol-bar">
+    <a href="https://iraai.ru/" class="home-link">← IRAAI.RU</a>
     <div><span class="live-dot"></span>AI reХАБ // ЭКСТРЕННЫЙ ВЫПУСК</div>
     <div>ФЕВРАЛЬ 2026</div>
 </div>
